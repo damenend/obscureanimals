@@ -1,0 +1,136 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  line-height: 1;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: #F2EDD5;
+  color: #111;
+}
+
+h1,
+h2 {
+  margin: 0 0 .5rem 0;
+  line-height: 1.1;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 2.25rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+p {
+  margin: 0 0 1rem 0;
+}
+
+main {
+  text-align: center;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  color: #2C736C;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+small {
+  font-weight: 400;
+  font-size: .8rem;
+  display: block;
+}
+
+.container {
+  padding: 0 16px;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 980px;
+}
+
+.yt-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.yt-wrapper::after {
+  display: block;
+  content: "";
+  padding-top: 56.25%;
+}
+
+.yt-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+footer {
+  width: 100%; text-align: center;
+  padding: 1rem 0;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.icon-link {
+  display: block;
+  margin: 0 .5rem;
+  transition: fill 300ms ease;
+  height: 2rem;
+  width: 2rem;
+}
+
+.icon-link:hover {
+  fill: #2C736C;
+}
+
+svg {
+  display: block;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.hero {
+  min-height: auto;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 576px) {
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
