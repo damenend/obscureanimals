@@ -35,10 +35,6 @@ body {
   }
 }
 
-main {
-  margin-bottom: 1rem;
-}
-
 h1,
 h2 {
   margin: 0 0 .5rem 0;
@@ -142,4 +138,8 @@ img {
     justify-content: center;
     align-items: center;
   }
+}
+
+.hero-image {
+  margin: 1rem 0;
 }
