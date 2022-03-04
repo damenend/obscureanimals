@@ -1,3 +1,8 @@
+:root {
+  --blue: #4E98D9;
+  --blue-hover: #4586BF;
+}
+
 *,
 *::before,
 *::after {
@@ -37,16 +42,16 @@ main {
 h1,
 h2 {
   margin: 0 0 .5rem 0;
-  line-height: 1.1;
+  line-height: 1.2;
   font-weight: 300;
 }
 
 h1 {
-  font-size: 2.813rem;
+  font-size: 3rem;
 }
 
 h2 {
-  font-size: 1.875rem;
+  font-size: 2rem;
 }
 
 p {
@@ -54,12 +59,11 @@ p {
 }
 
 a {
-  color: #2C736C;
-  text-decoration: none;
+  color: var(--blue);
 }
 
 a:hover {
-  text-decoration: underline;
+  color: var(--blue-hover);
 }
 
 small {
@@ -114,7 +118,7 @@ footer {
 }
 
 .icon-link:hover {
-  fill: #2C736C;
+  fill: var(--blue-hover);
 }
 
 svg {
