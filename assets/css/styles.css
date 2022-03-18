@@ -29,6 +29,10 @@ body {
   text-align: center;
 }
 
+main {
+  padding-top: 1rem;
+}
+
 @media (min-width: 576px) {
   body {
     display: block;
@@ -79,6 +83,7 @@ small {
   position: relative;
   overflow: hidden;
   width: 100%;
+  margin-bottom: 1rem;
 }
 
 .yt-wrapper::after {
@@ -96,21 +101,19 @@ small {
 }
 
 footer {
-  margin-bottom: 1rem;
+  padding-bottom: 1rem;
 }
 
 .social {
   display: flex;
   justify-content: center;
-  margin-bottom: 1rem;
 }
 
 .icon-link {
   display: block;
   margin: 0 .5rem;
   transition: fill 300ms ease;
-  height: 2rem;
-  width: 2rem;
+  fill: #fff;
 }
 
 .icon-link:hover {
@@ -119,6 +122,8 @@ footer {
 
 svg {
   display: block;
+  width: 100%;
+  max-width: 3rem;
 }
 
 img {
@@ -127,19 +132,20 @@ img {
 }
 
 .hero {
-  min-height: auto;
-  margin-bottom: 1rem;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
 }
 
 @media (min-width: 576px) {
   .hero {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: url("../images/obscure_animals_background.jpg") fixed center center no-repeat;
+    background-size: cover;
   }
 }
 
 .hero-image {
-  margin: 1rem 0;
+  margin-bottom: 1rem;
 }
