@@ -127,7 +127,6 @@ svg {
 }
 
 img {
-  display: block;
   max-width: 100%;
 }
 
@@ -137,13 +136,6 @@ img {
   justify-content: center;
   align-items: center;
   background: #000;
-}
-
-@media (min-width: 576px) {
-  .hero {
-    background: url("../images/obscure_animals_background.jpg") fixed center center no-repeat;
-    background-size: cover;
-  }
 }
 
 .hero-image {
