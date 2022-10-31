@@ -29,8 +29,17 @@ body {
   text-align: center;
 }
 
-main {
-  padding-top: 1rem;
+section,
+footer {
+  padding: 2rem 0;
+}
+
+hr {
+  margin: 1rem 0;
+  color: #fff;
+  border: 0;
+  border-top: 1px solid;
+  opacity: 0.25;
 }
 
 @media (min-width: 576px) {
@@ -133,12 +142,24 @@ img {
   margin-bottom: 1rem;
 }
 
+.dark {
+  background: #000;
+  color: #fff;
+}
+
+.dark a {
+  color: #fff;
+}
+
+.dark a:hover {
+  color: var(--blue-hover);
+}
+
 .hero {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #000;
 }
 
 .hero-image {
