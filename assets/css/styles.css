@@ -150,14 +150,16 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url('../images/bunny.png') center center no-repeat;
+  background-color: #000;
+  background-image: url('../images/bunny.png');
+  background-position: center center;
+  background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: contain;
 }
 
 @media (min-width: 576px) {
   .hero {
-    background: url('../images/bunny.png') center center no-repeat, #000;
     background-attachment: fixed;
   }
 }
