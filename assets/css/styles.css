@@ -160,6 +160,9 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: url('../images/bunny.png') center center no-repeat, #000;
+  background-attachment: fixed;
+  background-size: contain;
 }
 
 .hero-image {
