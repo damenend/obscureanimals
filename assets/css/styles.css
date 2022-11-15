@@ -1,6 +1,7 @@
 :root {
   --blue: #21679C;
   --blue-hover: #3199E8;
+  --pink: #e34192;
 }
 
 *,
@@ -111,13 +112,15 @@ footer {
 
 .icon-link {
   display: block;
-  margin: 0 .5rem;
-  transition: fill 300ms ease;
+  padding: 1rem;
+  transition: fill 300ms ease, background 300ms ease;
   fill: #fff;
+  border-radius: 50%;
 }
 
 .icon-link:hover {
-  fill: var(--blue-hover);
+  fill: var(--pink);
+  background: #fff;
 }
 
 svg {
@@ -162,5 +165,5 @@ img {
 }
 
 .hero-image {
-  margin-bottom: 1rem;
+  margin-bottom: 0;
 }
