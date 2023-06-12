@@ -101,10 +101,6 @@ small {
   height: 100%;
 }
 
-footer {
-  padding-bottom: 1rem;
-}
-
 .social {
   display: flex;
   justify-content: center;
