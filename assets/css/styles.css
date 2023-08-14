@@ -1,6 +1,6 @@
 :root {
-  --blue: #21679C;
-  --blue-hover: #3199E8;
+  --blue: #21679c;
+  --blue-hover: #3199e8;
   --pink: #e34192;
 }
 
@@ -17,11 +17,11 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 1.5;
-  background-color: #F2EDD5;
+  background-color: #f2edd5;
   color: #000;
   text-align: center;
 }
@@ -41,7 +41,7 @@ hr {
 
 h1,
 h2 {
-  margin: 0 0 .5rem 0;
+  margin: 0 0 0.5rem 0;
   line-height: 1.2;
   font-weight: 400;
 }
@@ -69,7 +69,7 @@ a:hover {
 
 small {
   font-weight: 400;
-  font-size: .8rem;
+  font-size: 0.8rem;
   display: block;
 }
 
@@ -153,12 +153,10 @@ img {
 
 @media (min-width: 576px) {
   .hero {
-    background: url('../images/bunny.png') center center no-repeat, #000;
+    background: url("../images/obscure_animals_bunny.png") center center
+        no-repeat,
+      #000;
     background-attachment: fixed;
     background-size: contain;
   }
-}
-
-.hero-image {
-  margin-bottom: 0;
 }
