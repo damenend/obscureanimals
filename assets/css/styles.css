@@ -1,7 +1,8 @@
 :root {
-  --blue: #21679c;
-  --blue-hover: #3199e8;
-  --pink: #e34192;
+  --blue: #4586bf;
+  --blue-hover: #3bbcd9;
+  --black: #000;
+  --white: #fff;
 }
 
 *,
@@ -17,9 +18,9 @@ html {
 }
 
 body {
-  font-family: "Inter", sans-serif;
-  background-color: #f2edd5;
-  color: #000;
+  font-family: "Montserrat", sans-serif;
+  background: #e2dad0;
+  color: var(--black);
   margin: 0px;
   font-weight: 400;
   font-size: 1rem;
@@ -32,11 +33,32 @@ footer {
   padding-bottom: 48px;
 }
 
-h1 {
-  font-size: 3.375rem;
-  line-height: 1.2;
-  font-weight: 300;
+h1,
+h2 {
   margin: 0 0 0.5rem;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 900;
+  margin: 0 0 0.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: inherit;
+}
+
+@media (min-width: 576px) {
+  h1 {
+    font-size: 6rem;
+    letter-spacing: -4px;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
 }
 
 p {
@@ -70,6 +92,28 @@ small {
   width: 100%;
   margin: 0 auto;
   max-width: 900px;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+}
+
+.hero-image {
+  margin-bottom: 0;
+}
+
+@media (min-width: 576px) {
+  .hero {
+    background: url("../images/obscure_animals_bunny.png") center center
+        no-repeat,
+      var(--black);
+    background-attachment: fixed;
+    background-size: contain;
+  }
 }
 
 .yt-wrapper {
@@ -106,13 +150,13 @@ small {
   display: block;
   padding: 1rem;
   transition: fill 300ms ease, background 300ms ease;
-  fill: #fff;
+  fill: var(--white);
   border-radius: 50%;
 }
 
 .icon-link:hover {
-  fill: var(--pink);
-  background: #fff;
+  fill: var(--blue-hover);
+  background: var(--white);
 }
 
 svg {
@@ -124,27 +168,10 @@ svg {
 img {
   max-width: 100%;
   display: block;
+  margin-bottom: 1rem;
 }
 
 .dark {
-  background: #000;
-  color: #fff;
-}
-
-.hero {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #000;
-}
-
-@media (min-width: 576px) {
-  .hero {
-    background: url("../images/obscure_animals_bunny.png") center center
-        no-repeat,
-      #000;
-    background-attachment: fixed;
-    background-size: contain;
-  }
+  background: var(--black);
+  color: var(--white);
 }
