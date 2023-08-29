@@ -3,6 +3,7 @@
   --blue-hover: #3bbcd9;
   --black: #000;
   --white: #fff;
+  --bg: #e2dad0;
 }
 
 *,
@@ -19,11 +20,11 @@ html {
 
 body {
   font-family: "Montserrat", sans-serif;
-  background: #e2dad0;
+  background: var(--bg);
   color: var(--black);
   margin: 0px;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 1.5rem;
   line-height: 1.5;
 }
 
@@ -37,33 +38,19 @@ h1,
 h2 {
   margin: 0 0 0.5rem;
   line-height: 1.1;
+  font-weight: 900;
 }
 
 h1 {
-  font-size: 2rem;
-  font-weight: 900;
-  margin: 0 0 0.5rem;
+  font-size: 3.375rem;
 }
 
 h2 {
-  font-size: 1.5rem;
-  font-weight: inherit;
-}
-
-@media (min-width: 576px) {
-  h1 {
-    font-size: 6rem;
-    letter-spacing: -4px;
-  }
-
-  h2 {
-    font-size: 3rem;
-  }
+  font-size: 2.25rem;
 }
 
 p {
   margin: 0 0 1rem;
-  font-size: 1.5rem;
 }
 
 a {
@@ -76,8 +63,8 @@ a:hover {
 }
 
 small {
-  font-weight: 400;
-  font-size: 0.8rem;
+  font-weight: inherit;
+  font-size: 1rem;
   display: block;
 }
 
@@ -91,50 +78,36 @@ small {
   padding-right: 16px;
   width: 100%;
   margin: 0 auto;
-  max-width: 900px;
+  max-width: 960px;
 }
 
 .hero {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 6rem 0;
   background: #000;
+}
+
+@media (min-width: 576px) {
+  .hero {
+    padding: 0;
+    background: url("../images/obscure_animals_bunny.png") center center
+        no-repeat,
+      var(--black);
+    background-attachment: fixed;
+    background-size: contain;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .hero-image {
   margin-bottom: 0;
 }
 
-@media (min-width: 576px) {
-  .hero {
-    background: url("../images/obscure_animals_bunny.png") center center
-        no-repeat,
-      var(--black);
-    background-attachment: fixed;
-    background-size: contain;
-  }
-}
-
-.yt-wrapper {
-  position: relative;
-  overflow: hidden;
+.yt {
+  aspect-ratio: 16 / 9;
   width: 100%;
-  margin-bottom: 1rem;
-}
-
-.yt-wrapper::after {
-  display: block;
-  content: "";
-  padding-top: 56.25%;
-}
-
-.yt-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
 }
 
 .centered {
