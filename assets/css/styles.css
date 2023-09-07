@@ -9,12 +9,11 @@
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 html {
   -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
   text-size-adjust: 100%;
 }
 
@@ -68,6 +67,37 @@ small {
   display: block;
 }
 
+img,
+svg {
+  vertical-align: middle;
+}
+
+svg {
+  display: block;
+  width: 100%;
+  max-width: 3rem;
+}
+
+figure {
+  margin: 0 0 1rem;
+  display: inline-block;
+}
+
+figure img {
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+figcaption {
+  font-size: 90%;
+  color: #666;
+}
+
 .main {
   padding-top: 48px;
   padding-bottom: 48px;
@@ -102,7 +132,8 @@ small {
 }
 
 .hero-image {
-  margin-bottom: 0;
+  margin: 0;
+  display: block;
 }
 
 .yt {
@@ -130,18 +161,6 @@ small {
 .icon-link:hover {
   fill: var(--blue-hover);
   background: var(--white);
-}
-
-svg {
-  display: block;
-  width: 100%;
-  max-width: 3rem;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-  margin-bottom: 1rem;
 }
 
 .dark {
