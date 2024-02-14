@@ -135,8 +135,15 @@ small {
 
 .social {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 576px) {
+  .social {
+    justify-content: space-between;
+  }
 }
 
 .social a {
