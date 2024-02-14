@@ -1,50 +1,52 @@
 :root {
-  --blue: #4586bf;
-  --blue-hover: #3bbcd9;
   --black: #000;
+  --grey: #ddd;
+  --text: #333;
+  --pink: #a52252;
+  --blue: #238ca6;
   --white: #fff;
-  --bg: #e2dad0;
 }
 
 *,
-*::before,
-*::after {
+*::after,
+*::before {
   box-sizing: border-box;
 }
 
-html {
-  -webkit-font-smoothing: antialiased;
-  text-size-adjust: 100%;
-}
-
 body {
-  font-family: "Montserrat", sans-serif;
-  background: var(--bg);
-  color: var(--black);
-  margin: 0px;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 1.5rem;
+  font-style: normal;
+  font-size: 1.25rem;
   line-height: 1.5;
+  margin: 0;
+  color: var(--text);
 }
 
-footer {
-  text-align: center;
-  padding-top: 48px;
-  padding-bottom: 48px;
+main {
+  padding-top: 2rem;
 }
 
 h1,
-h2 {
-  margin: 0 0 0.5rem;
+h2,
+h3 {
   line-height: 1.1;
-  font-weight: 900;
+  font-family: inherit;
+  font-style: inherit;
+  font-weight: 300;
+  margin: 0 0 0.5rem;
+  text-align: center;
 }
 
 h1 {
-  font-size: 3.375rem;
+  font-size: 4.25rem;
 }
 
 h2 {
+  font-size: 3.25rem;
+}
+
+h3 {
   font-size: 2.25rem;
 }
 
@@ -53,117 +55,112 @@ p {
 }
 
 a {
+  color: var(--pink);
+}
+
+.quote {
+  margin: 0 0 1rem;
+  border-left: 0.5rem solid var(--blue);
+  padding-left: 1rem;
+}
+
+blockquote {
+  margin: 0 0 1rem;
+  font-size: 3.25rem;
   color: var(--blue);
-  transition: color 300ms ease;
+  font-weight: 300;
+  line-height: 1.1;
 }
 
-a:hover {
-  color: var(--blue-hover);
-}
-
-small {
-  font-weight: inherit;
-  font-size: 1rem;
-  display: block;
+blockquote p {
+  margin-bottom: 0;
 }
 
 img,
-svg {
-  vertical-align: middle;
-}
-
-svg {
-  display: block;
-  width: 100%;
-  max-width: 3rem;
-}
-
 figure {
-  margin: 0 0 1rem;
-  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  margin: 0;
 }
 
 figure img {
   margin-bottom: 0.5rem;
-  line-height: 1;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
 }
 
 figcaption {
-  font-size: 90%;
+  margin-bottom: 1rem;
   color: #666;
+  font-size: 1rem;
 }
 
-.main {
-  padding-top: 48px;
-  padding-bottom: 48px;
+.quote figcaption::before {
+  content: "— ";
+}
+
+footer {
+  padding: 2rem 0;
+  background: var(--black);
+  color: var(--white);
+  text-align: center;
+}
+
+small {
+  font-size: 0.875rem;
 }
 
 .container {
-  padding-left: 16px;
-  padding-right: 16px;
-  width: 100%;
-  margin: 0 auto;
   max-width: 960px;
+  padding: 0 16px;
+  margin: 0 auto;
 }
 
 .hero {
-  padding: 6rem 0;
-  background: #000;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #000 url("../images/bunnybg.webp") no-repeat center center fixed;
+  background-size: contain;
+  background-attachment: scroll;
+  color: var(--white);
 }
 
 @media (min-width: 576px) {
   .hero {
-    padding: 0;
-    background: url("../images/obscure_animals_bunny.png") center center
-        no-repeat,
-      var(--black);
     background-attachment: fixed;
-    background-size: contain;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
-}
-
-.hero-image {
-  margin: 0;
-  display: block;
-}
-
-.yt {
-  aspect-ratio: 16 / 9;
-  width: 100%;
-}
-
-.centered {
-  text-align: center;
 }
 
 .social {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  gap: 0.5rem;
 }
 
-.icon-link {
-  display: block;
-  padding: 1rem;
-  transition: fill 300ms ease, background 300ms ease;
+.social a {
+  display: inline-flex;
+}
+
+.social svg {
   fill: var(--white);
-  border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
+  transition: fill 300ms ease;
 }
 
-.icon-link:hover {
-  fill: var(--blue-hover);
-  background: var(--white);
+.social svg:hover {
+  fill: var(--grey);
 }
 
-.dark {
-  background: var(--black);
-  color: var(--white);
+.logo {
+  margin: 0 0 1rem 0;
+  line-height: 1;
+}
+
+.discography {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
