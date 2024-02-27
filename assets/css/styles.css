@@ -166,8 +166,12 @@ small {
   line-height: 1;
 }
 
-.discography {
+.row {
   display: flex;
   gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.flyer {
   margin-bottom: 1rem;
 }
