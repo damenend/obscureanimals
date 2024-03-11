@@ -207,16 +207,28 @@ small {
   margin-bottom: 1rem;
 }
 
-.col {
+.col,
+.col-2 {
   flex: 1 0 100%;
 }
 
 @media (min-width: 576px) {
   .col {
-    flex: 1 0 0;
+    flex: 1;
+  }
+
+  .col-2 {
+    flex: 2;
   }
 }
 
 article p:last-child {
   margin-bottom: 0;
+}
+
+ol,
+ul {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-left: 2rem;
 }
