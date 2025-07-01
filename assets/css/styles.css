@@ -1,250 +1,104 @@
-:root {
-  --background-dark: #0e0e0e;
-  --background-light: #fff;
-  --text-dark: #0e0e0e;
-  --text-light: #fff;
-  --text-hover: #ddd;
-  --pink: #d93b92;
-  --blue: #238ca6;
-}
-
 *,
-*::after,
-*::before {
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1.25rem;
-  line-height: 1.5;
   margin: 0;
-  color: var(--text-dark);
-  background: var(--background-light);
-}
-
-main {
-  padding-top: 2rem;
+  line-height: 1.5;
+  font-family: "Dosis", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: calc(1rem + 0.5vw);
 }
 
 h1,
-h2,
-h3 {
-  line-height: 1.2;
-  font-family: inherit;
-  font-style: inherit;
-  font-weight: 300;
-  margin: 0 0 0.5rem;
-  text-align: center;
-}
-
 h2 {
-  font-size: 6rem;
-}
-
-h3 {
-  font-size: 2rem;
-  font-weight: 500;
-}
-
-p {
-  margin: 0 0 1rem;
-}
-
-a {
-  color: var(--pink);
-}
-
-.quote {
-  margin: 0 0 1rem;
-  border-left: 0.5rem solid var(--blue);
-  padding-left: 1rem;
-}
-
-blockquote {
-  margin: 0 0 1rem;
-  font-size: 3.25rem;
-  color: var(--blue);
-  font-weight: 300;
   line-height: 1.1;
-}
-
-blockquote p {
-  margin-bottom: 0;
-}
-
-img,
-figure {
-  max-width: 100%;
-  height: auto;
-  vertical-align: middle;
-  margin: 0;
-}
-
-figure img {
+  font-weight: 400;
+  margin-top: 0;
   margin-bottom: 0.5rem;
 }
 
-figcaption {
-  margin-bottom: 1rem;
-  color: var(--text-dark);
-  font-size: .8rem;
+h1,
+h2 {
+  font-size: calc(1rem + 2vw);
 }
 
-.quote figcaption::before {
-  content: "— ";
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+main {
+  padding: 1rem 0;
 }
 
 footer {
-  padding: 2rem 0;
+  display: flex;
+  padding: 1rem 0;
   text-align: center;
-  background: var(--background-dark);
-  color: var(--text-light);
 }
 
-small {
-  font-size: 0.875rem;
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .container {
-  width: 100%;
-  padding-right: 16px;
-  padding-left: 16px;
-  margin-right: auto;
-  margin-left: auto;
+  max-width: 60rem;
+  padding: 0 1rem;
+  margin: 0 auto;
 }
 
-@media (min-width: 576px) {
-  .container {
-    max-width: 540px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 720px;
-  }
-}
-
-@media (min-width: 992px) {
-  .container {
-    max-width: 960px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1140px;
-  }
-}
-
-@media (min-width: 1400px) {
-  .container {
-    max-width: 1320px;
-  }
-}
-
-.hero {
+.splash {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+.splash-banner {
+  grid-area: banner;
+  background: #000;
+  padding: 1rem;
+}
+
+.splash-body {
+  grid-area: body;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  background: #000 url("../images/bunnybg.webp") no-repeat center center fixed;
-  background-size: contain;
-  background-attachment: scroll;
-  color: var(--text-light);
 }
 
-@media (min-width: 576px) {
-  .hero {
-    background-attachment: fixed;
-  }
+.dark {
+  background: #a6341b;
+  color: #fff;
 }
 
-.social {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-}
-
-@media (min-width: 576px) {
-  .social {
-    justify-content: space-between;
-  }
-}
-
-.social a {
-  display: inline-flex;
-}
-
-.social svg {
-  fill: var(--text-light);
-  height: 3rem;
-  width: 3rem;
-  transition: fill 300ms ease;
-}
-
-.social svg:hover {
-  fill: var(--text-hover);
+a {
+  color: #fff;
 }
 
 .logo {
-  margin: 0 0 1rem 0;
-  line-height: 1;
+  object-fit: contain;
+  width: 100%;
+  max-height: 100%;
 }
 
-.row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 1rem;
+.album {
+  width: 100%;
+  max-width: 30rem;
 }
 
-.col,
-.col-2 {
-  flex: 1 0 100%;
-}
-
-@media (min-width: 576px) {
-  .col {
-    flex: 1;
-  }
-
-  .col-2 {
-    flex: 2;
-  }
-}
-
-article p:last-child {
-  margin-bottom: 0;
-}
-
-ol,
-ul {
-  margin-top: 0;
-  margin-bottom: 1rem;
-  padding-left: 2rem;
-}
-
-.entry {
-  margin-bottom: 2rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid #ccc;
-}
-
-.entry-header {
-  text-align: left;
-}
-
-.discography {
-  margin-bottom: 1rem;
-}
-
-.yt {
+.video {
   aspect-ratio: 16 / 9;
   width: 100%;
+}
+
+small {
+  font-size: calc(0.8rem + 0.5vw);
 }
