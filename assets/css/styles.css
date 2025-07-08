@@ -32,7 +32,7 @@ h2 {
 }
 
 h3 {
-  font-size: calc(.8rem + 1.5vw);
+  font-size: calc(0.8rem + 1.5vw);
 }
 
 p {
@@ -89,6 +89,10 @@ img {
 }
 
 a {
+  color: #a6341b;
+}
+
+footer a {
   color: #fff;
 }
 
